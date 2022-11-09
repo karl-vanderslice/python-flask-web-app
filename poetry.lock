@@ -140,8 +140,8 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.8"
-content-hash = "969e26c9962690f8a5a1a42651f15ed29503d5dfabd55a4ef9b04ac3e1549ffb"
+python-versions = ">=3.8"
+content-hash = "e4c77eabf217f8ff16de832d7b9574f9d80397649fff749765712b9180dc45ab"
 
 [metadata.files]
 click = []
