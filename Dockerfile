@@ -1,6 +1,10 @@
 # syntax=docker/dockerfile:1.4
 
+LABEL org.opencontainers.image.source="https://github.com/karl-vanderslice/python-flask-web-app"
+
 FROM docker.io/library/python:3.8-slim-buster
+
+EXPOSE 5000
 
 # Install dev dependencies
 RUN apt-get update -qq \
@@ -38,3 +42,7 @@ RUN python3 -m pip install --no-cache-dir pip==${PIP_VERSION} pipx==${PIPX_VERSI
 WORKDIR /app
 
 COPY poetry.lock pyproject.toml src/ /app/
+
+RUN poetry install
+
+CMD ["poetry", "run", "python3", "app.py"]
