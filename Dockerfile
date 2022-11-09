@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1.4
 
-LABEL org.opencontainers.image.source="https://github.com/karl-vanderslice/python-flask-web-app"
-
 FROM docker.io/library/python:3.8-slim-buster
+
+LABEL org.opencontainers.image.source="https://github.com/karl-vanderslice/python-flask-web-app"
 
 EXPOSE 5000
 
